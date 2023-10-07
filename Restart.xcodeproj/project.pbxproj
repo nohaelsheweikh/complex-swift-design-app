@@ -11,6 +11,10 @@
 		A3E37CF72ACDA53300F6A7E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E37CF62ACDA53300F6A7E5 /* ContentView.swift */; };
 		A3E37CF92ACDA53500F6A7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E37CF82ACDA53500F6A7E5 /* Assets.xcassets */; };
 		A3E37CFC2ACDA53500F6A7E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E37CFB2ACDA53500F6A7E5 /* Preview Assets.xcassets */; };
+		A3E37D062ACDA7FC00F6A7E5 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3E37D042ACDA7FC00F6A7E5 /* chimeup.mp3 */; };
+		A3E37D072ACDA7FC00F6A7E5 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A3E37D052ACDA7FC00F6A7E5 /* success.m4a */; };
+		A3F302DE2ACEFCBD00F21503 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F302DD2ACEFCBD00F21503 /* OnboardingView.swift */; };
+		A3F302E02ACEFCD500F21503 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F302DF2ACEFCD500F21503 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		A3E37CF62ACDA53300F6A7E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A3E37CF82ACDA53500F6A7E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3E37CFB2ACDA53500F6A7E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A3E37D042ACDA7FC00F6A7E5 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
+		A3E37D052ACDA7FC00F6A7E5 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
+		A3E37D0D2ACDACD700F6A7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A3F302DD2ACEFCBD00F21503 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A3F302DF2ACEFCD500F21503 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,12 @@
 		A3E37CF32ACDA53300F6A7E5 /* Restart */ = {
 			isa = PBXGroup;
 			children = (
+				A3E37D0D2ACDACD700F6A7E5 /* Info.plist */,
+				A3E37D0C2ACDAB2E00F6A7E5 /* Utilities */,
+				A3E37D0B2ACDAB0900F6A7E5 /* Views */,
+				A3E37D092ACDA8AE00F6A7E5 /* Sounds */,
 				A3E37CF42ACDA53300F6A7E5 /* RestartApp.swift */,
-				A3E37CF62ACDA53300F6A7E5 /* ContentView.swift */,
+				A3E37D0A2ACDAAE100F6A7E5 /* Screens */,
 				A3E37CF82ACDA53500F6A7E5 /* Assets.xcassets */,
 				A3E37CFA2ACDA53500F6A7E5 /* Preview Content */,
 			);
@@ -65,6 +78,39 @@
 				A3E37CFB2ACDA53500F6A7E5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3E37D092ACDA8AE00F6A7E5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A3E37D042ACDA7FC00F6A7E5 /* chimeup.mp3 */,
+				A3E37D052ACDA7FC00F6A7E5 /* success.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A3E37D0A2ACDAAE100F6A7E5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A3E37CF62ACDA53300F6A7E5 /* ContentView.swift */,
+				A3F302DD2ACEFCBD00F21503 /* OnboardingView.swift */,
+				A3F302DF2ACEFCD500F21503 /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A3E37D0B2ACDAB0900F6A7E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3E37D0C2ACDAB2E00F6A7E5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E37D072ACDA7FC00F6A7E5 /* success.m4a in Resources */,
+				A3E37D062ACDA7FC00F6A7E5 /* chimeup.mp3 in Resources */,
 				A3E37CFC2ACDA53500F6A7E5 /* Preview Assets.xcassets in Resources */,
 				A3E37CF92ACDA53500F6A7E5 /* Assets.xcassets in Resources */,
 			);
@@ -137,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F302DE2ACEFCBD00F21503 /* OnboardingView.swift in Sources */,
+				A3F302E02ACEFCD500F21503 /* HomeView.swift in Sources */,
 				A3E37CF72ACDA53300F6A7E5 /* ContentView.swift in Sources */,
 				A3E37CF52ACDA53300F6A7E5 /* RestartApp.swift in Sources */,
 			);
@@ -262,15 +312,19 @@
 		A3E37D002ACDA53500F6A7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Restart/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = Restart/Info.plist;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,24 +332,31 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = noha.Restart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A3E37D012ACDA53500F6A7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Restart/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_FILE = Restart/Info.plist;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,9 +364,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = noha.Restart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
