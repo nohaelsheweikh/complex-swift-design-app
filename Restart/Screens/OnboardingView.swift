@@ -10,6 +10,9 @@ import SwiftUI
 struct OnboardingView: View {
     // MARK: - PROPERTY
     @AppStorage("onboarding") var isOnboardingViewActive : Bool = true
+    @State private var buttonwidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffset: CGFloat = 0
+    @State private var isAnimating: Bool = false
     
     // MARK: -BODY
     var body: some View {
@@ -36,13 +39,19 @@ struct OnboardingView: View {
                     .padding(.horizontal,10)
                 }//: HEADER
                 
+                .opacity(isAnimating ? 1 : 0 )
+                .offset(y: isAnimating ? 0 : -40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
+                .animation(.easeOut(duration: 0.5), value: isAnimating)
+                
                 //MARK: - CENTER
-                CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
+               
                 ZStack{
-                   
+                    CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
+                        .opacity(isAnimating ? 1 : 0)
                 }//: CENTER
                 
                 Spacer()
@@ -71,7 +80,7 @@ struct OnboardingView: View {
                     HStack{
                         Capsule()
                             .fill(Color("ColorRed"))
-                            .frame(width: 80)
+                            .frame(width: buttonOffset + 80)
                         
                         Spacer()
                     }
@@ -90,6 +99,26 @@ struct OnboardingView: View {
                         }
                         .foregroundColor(.white)
                         .frame(width: 80,height: 80,alignment: .center)
+                        .offset(x:buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged{gesture in
+                                    if gesture.translation.width > 0 && buttonOffset <= buttonwidth - 80
+                                    {
+                                        buttonOffset = gesture.translation.width
+                                    }
+                                }
+                                .onEnded{
+                                    _ in
+                                    if buttonOffset > buttonwidth / 2{
+                                        buttonOffset = buttonwidth - 80
+                                        isOnboardingViewActive = false
+                                    }else{
+                                        buttonOffset = 0
+                                    }
+                                    
+                                }
+                        )//: GESTURE
                         .onTapGesture {
                             isOnboardingViewActive = false
                         }
@@ -99,11 +128,16 @@ struct OnboardingView: View {
                     
                 }//:FOOTER
                
-                .frame(height: 80,alignment: .center)
+                .frame(width:buttonwidth,height: 80,alignment: .center)
                 .padding()
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y: isAnimating ? 1 : 40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
             }//: VSTACK
         }//: ZSTACK
-        
+        .onAppear(perform: {
+            isAnimating = true
+        })
     }
 }
 
